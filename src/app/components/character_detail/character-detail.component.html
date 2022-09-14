@@ -1,0 +1,21 @@
+<div class="detail__wrap">
+  <div class="detail__box">
+    <img class="detail__img alive-img"
+         [src]="character.image"
+         [alt]="character.name"
+         [ngClass]="checkIsDead() ? 'dead-img' : 'alive-img'">
+    <div class="detail__info">
+      <p class="detail__info-name">Name: {{character.name}}</p>
+      <p class="detail__info-status">Status: {{character.status}}</p>
+      <p class="detail__info-species">Species: {{character.species}}</p>
+      <p class="detail__info-type">Type: {{character.type ? character.type : 'Unknown'}}</p>
+      <p class="detail__info-gender">Gender: {{character.gender}}</p>
+      <p class="detail__info-location">Location: {{character.location.name}}</p>
+    </div>
+  </div>
+  <h2 class="detail__episodes-title">Episodes</h2>
+  <p class="detail__episodes-count">Count: {{episodes.length}}</p>
+  <div class="detail__episodes">
+    <app-episode *ngFor="let episode of episodes" [episode]="episode"></app-episode>
+  </div>
+</div>

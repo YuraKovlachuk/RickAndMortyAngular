@@ -1,0 +1,29 @@
+@import '../../../variables';
+
+.error-box {
+  background-color: #790606;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  position: relative;
+}
+
+.error-text {
+  font-family: $vox-font;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.error-btn {
+  position: absolute;
+  color: white;
+  font-family: $vox-font;
+  right: 1rem;
+  margin: auto 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+}

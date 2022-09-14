@@ -1,0 +1,19 @@
+<form
+  [formGroup]="form" (ngSubmit)="addNewCharacter(newInput.valueAsNumber); $event.preventDefault(); newInput.value=''"
+  id="search-wrap"
+  class="search-wrap"
+  >
+  <input type="number"
+         name="search"
+         id="search-input"
+         placeholder="Enter the hero ID from 1 to 826"
+         #newInput
+         formControlName="id"
+         [class.invalid]="id!.invalid && (id!.dirty || id!.touched)">
+  <button id="search-btn" type="submit" [disabled]="form.invalid">Search</button>
+  <div *ngIf="id!.invalid && id!.errors && (id!.dirty || id!.touched)">
+    <p class="form__message" *ngIf="id!.hasError('min')">The ID must be higher than 1!</p>
+    <p class="form__message" *ngIf="id!.hasError('max')">The ID must be lower than 826!</p>
+    <p class="form__message" *ngIf="id!.hasError('required')">The ID is required!</p>
+  </div>
+</form>

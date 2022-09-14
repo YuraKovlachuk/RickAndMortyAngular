@@ -1,0 +1,38 @@
+.header {
+  position: relative;
+
+  &__logo {
+    object-fit: cover;
+    width: 450px;
+    margin: 0 auto;
+  }
+
+  &__logo-img {
+    width: 100%;
+  }
+
+  &__fixed {
+    object-fit: cover;
+    width: 120px;
+    top: 60px;
+    right: 200px;
+    height: 120px;
+    position: absolute;
+  }
+
+  &__fixed>img {
+    width: 100%;
+  }
+
+  &__fixed>img:last-child {
+    display: none;
+  }
+
+  &__fixed:hover img:last-child {
+    display: block;
+  }
+
+  &__fixed:hover img:first-child {
+    display: none;
+  }
+}

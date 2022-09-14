@@ -1,0 +1,20 @@
+  <app-header></app-header>
+  <app-search_box (charIdEvent)="addCharacterById($event)"></app-search_box>
+  <div class="character-wrap">
+    <app-spinner *ngIf="loading"></app-spinner>
+    <app-character
+      *ngFor="let character of showedCharacters" [character]="character"
+      (deleteIdEvent)="deleteId = $event"
+    ></app-character>
+    <button *ngIf="characters.length > loadMoreCount" class="more-btn" (click)="loadMore()">Load More</button>
+  </div>
+  <app-modal
+    *ngIf="modalService.isVisible$ | async"
+    [title]="'Delete the character?'"
+    (chooseEvent)="deleteCharacter($event)">
+  </app-modal>
+  <app-modal-samechar
+    *ngIf="modalSameCharService.isVisible$ | async"
+    [title]="modalTitle">
+  </app-modal-samechar>
+

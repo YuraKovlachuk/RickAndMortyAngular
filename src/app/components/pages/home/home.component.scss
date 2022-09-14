@@ -1,0 +1,61 @@
+@import '../../../../variables';
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.character-wrap {
+  margin: 10px auto 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  width: 38%;
+}
+
+.more-btn {
+  display: block;
+  margin: 0 auto 30px auto;
+  background: $more-background;
+  border: 3px solid $more-border;
+  color: $more-color-text;
+  padding: 10px 20px;
+  font-family: $vox-font;
+  font-size: 1.2rem;
+  line-height: 20px;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.more-btn:hover {
+  background: $more-background-hover;
+  border: 3px solid $more-border-hover;
+  color: $more-color-text-hover;
+}
+
+.more-btn:active {
+  background: $more-background;
+  border: 3px solid $more-border;
+  color: $more-color-text;
+}
+
+.more-btn:focus {
+  background: $more-background-hover;
+  border: 3px solid $more-border-hover;
+  color: $more-color-text-hover;
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+app-character {
+  width: 100%;
+}
+
+app-spinner {
+  margin: 0 auto;
+}

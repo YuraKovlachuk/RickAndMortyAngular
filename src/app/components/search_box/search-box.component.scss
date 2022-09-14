@@ -1,0 +1,87 @@
+@import '../../../variables';
+
+.search-wrap {
+  margin: 20px auto;
+  text-align: center;
+}
+
+#search-input {
+  width: 30%;
+  min-height: 50px;
+  border: 1px solid $border-color;
+  padding-left: 15px;
+  background-color: #000;
+  font-family: $vox-font;
+  box-shadow: 0 0 50px 5px $border-color;
+  font-size: 1rem;
+  color: #5fe03f;
+}
+
+#search-input::placeholder {
+  font-family: $vox-font;
+  font-size: 1rem;
+  color: #5fe03f;
+}
+
+#search-input:focus {
+  background: #0a1b04;
+  border: 1px solid #5fe03f;
+  outline: none;
+}
+
+#search-btn {
+  margin-left: 3px;
+  font-family: $vox-font;
+  box-shadow: 0 0 50px 5px $border-color;
+  color: #5fe03f;
+  width: 8%;
+  min-height: 50px;
+  background: #133809;
+  border: 1px solid $border-color;
+  transition: .2s;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#search-btn:hover {
+  background: #0a1b04;
+  color: $hover-color;
+}
+
+#search-btn:active {
+  transition: 0s;
+  background: #133809;
+  color: #5fe03f;
+}
+
+#search-btn:focus {
+  background: #0a1b04;
+  border: 1px solid #5fe03f;
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.form__message {
+  font-family: $vox-font;
+  text-align: center;
+  margin: 20px 0 10px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: .2s;
+  color: #ee2323;
+}
+
+.invalid {
+  border: 1px solid $dead-status-bd !important;
+}
+
+

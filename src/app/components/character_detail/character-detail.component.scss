@@ -1,0 +1,92 @@
+@import '../../../variables';
+
+.detail {
+  &__wrap {
+    width: 60%;
+    margin: 0 auto 20px auto;
+    border: 5px solid $info-bd-color;
+    background-color: $info-bg-color;
+    color: $info-text-color;
+    padding: 30px;
+    transition: .2s;
+  }
+
+  &__box {
+    display: flex;
+    gap: 4%;
+  }
+
+  &__img {
+    width: 40%;
+    object-fit: cover;
+  }
+
+  &__info * {
+    font-family: $vox-font;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    width: 60%;
+    font-size: 1.1rem;
+
+    &-name {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__episodes-title{
+    text-align: center;
+    font-size: 2rem;
+    margin: 50px 0 0 0;
+    font-family: $vox-font;
+  }
+
+  &__episodes {
+    margin: 20px auto 0 auto;
+    width: 90%;
+    background: $episodes-bg-color;
+    display: flex;
+    gap: 30px;
+    padding: 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+  }
+
+  &__episodes-count{
+    text-align: center;
+    font-family: $vox-font;
+    font-size: 1rem;
+  }
+}
+
+.alive-img {
+  border: 4px solid $alive-status-bd;
+}
+
+.dead-img {
+  border: 4px solid $dead-status-bd;
+}
+
+.detail__wrap:hover {
+  border: 5px solid $hover-color;
+  box-shadow: 0 0 50px 1px $border-color;
+}
+
+.dead:hover {
+  border: 5px solid rgb(213, 17, 17);
+  box-shadow: 0 0 50px 1px rgb(213, 17, 17);
+}
+
+app-episode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+}

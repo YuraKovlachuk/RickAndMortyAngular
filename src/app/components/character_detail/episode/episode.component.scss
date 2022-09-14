@@ -1,0 +1,29 @@
+@import '../../../../variables';
+
+p {
+  text-align: center;
+  font-family: $vox-font;
+}
+
+.episode {
+  &__image {
+    object-fit: cover;
+    width: 85%;
+    transition: .2s;
+  }
+
+  &__image:hover {
+    box-shadow: 0 0 20px 1px $border-color;
+    transform: scale(1.1);
+  }
+
+  &__info {
+    margin: 10px 0 0 0;
+  }
+
+  &__info-name{
+    width: 150px;
+  }
+}
+
+

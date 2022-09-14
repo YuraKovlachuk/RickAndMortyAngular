@@ -1,0 +1,5 @@
+<div class="goto__wrap" routerLink="/">
+  <h2 class="goto">Go to main page</h2>
+</div>
+<app-spinner *ngIf="loading"></app-spinner>
+<app-character_detail [character]="character" [episodes]="episodes"></app-character_detail>

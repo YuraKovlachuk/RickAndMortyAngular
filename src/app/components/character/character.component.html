@@ -1,0 +1,25 @@
+<div
+  class="character"
+  [ngClass]="checkIsDead() ? 'dead' : ''"
+  [attr.data-id]="character.id"
+  #char>
+  <div class="character__main-info" [routerLink]="['/character', character.id]">
+    <img class="character__img" [src]="character.image" [alt]="character.name">
+    <p class="character__status"
+       [ngClass]="checkIsDead() ? 'dead-status' : 'alive-status'">
+      {{character.status}}
+    </p>
+    <p class="character__name">{{character.name}}</p>
+  </div>
+  <div class="character__info">
+    <p class="character__species">Species: {{character.species}}</p>
+    <p class="character__type">Type: {{character.type ? character.type : 'Unknown'}}</p>
+    <p class="character__gender">Gender: {{character.gender}}</p>
+    <p class="character__location">Location: {{character.location.name}}</p>
+  </div>
+  <button
+    class="character__delete-btn"
+    (click)="deleteEvent(+char.dataset['id']!)">
+    {{'&#9587' | decodeHtmlString}}
+  </button>
+</div>

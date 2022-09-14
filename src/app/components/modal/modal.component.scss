@@ -1,0 +1,120 @@
+@import '../../../variables';
+$padding-top-bot: 9px;
+$padding-left-right: 40px;
+
+.modal {
+  &__img {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 400px;
+    z-index: 4;
+  }
+
+  &__back {
+    z-index: 4;
+    background: #000;
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__window {
+    position: fixed;
+    z-index: 5;
+    width: 500px;
+    height: 200px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 32px;
+    background: $background-color;
+    border: 3px solid $border-color;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 10px 0;
+    font-family: $vox-font;
+    color: $text-color;
+  }
+
+  &__buttons {
+    margin: 30px 0 0 0;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+  }
+
+  &__btn-submit {
+    display: block;
+    background: $more-background;
+    border: 3px solid $more-border;
+    color: $more-color-text;
+    padding: $padding-top-bot $padding-left-right;
+    font-family: $vox-font;
+    font-size: 1.2rem;
+    line-height: 20px;
+    transition: .2s;
+    cursor: pointer;
+  }
+
+  &__btn-submit:hover {
+    background: $more-background-hover;
+    border: 3px solid $more-border-hover;
+    color: $more-color-text-hover;
+  }
+
+  &__btn-submit:active {
+    background: $more-background;
+    border: 3px solid $more-border;
+    color: $more-color-text;
+  }
+
+  &__btn-submit:focus {
+    background: $more-background-hover;
+    border: 3px solid $more-border-hover;
+    color: $more-color-text-hover;
+    outline: none;
+  }
+
+  &__btn-deny {
+    display: block;
+    background-color: rgb(119, 20, 20);
+    border: 3px solid rgb(165, 21, 21);
+    color: rgb(236, 13, 13);
+    padding: $padding-top-bot $padding-left-right;
+    font-family: $vox-font;
+    font-size: 1.2rem;
+    line-height: 20px;
+    transition: .2s;
+    cursor: pointer;
+  }
+
+  &__btn-deny:hover {
+    background-color: rgb(76, 19, 19);
+    border: 3px solid rgb(196, 25, 25);
+    color: rgb(246, 7, 7);
+  }
+
+  &__btn-deny:active {
+    background-color: rgb(119, 20, 20);
+    border: 3px solid rgb(165, 21, 21);
+    color: rgb(227, 15, 15);
+  }
+
+  &__btn-deny:focus {
+    background-color: rgb(76, 19, 19);
+    border: 3px solid rgb(196, 25, 25);
+    color: rgb(246, 7, 7);
+    outline: none;
+  }
+}

@@ -1,0 +1,8 @@
+<div class="modal__back" (click)="modalService.close()" (keydown)="modalService.close()"></div>
+<img class="modal__img" src="../../../assets/img/modal.png" alt="modal-png" [@fadeInOut]="">
+<div class="modal__window" [@fadeInOut]="">
+  <h2 class="modal__title">{{title}}</h2>
+  <div class="modal__buttons">
+    <button class="modal__btn-submit" (click)="modalService.close()">OK</button>
+  </div>
+</div>
